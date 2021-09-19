@@ -9,37 +9,37 @@ namespace UIPlayground
 {
     static class Playground
     {
-        private static List<UIElement> elements = new List<UIElement>();
+        private static UIScreen Screen = new UIScreen();
 
         public static void Initialize()
         {
-            elements.Add(new UIVContainer
+            Screen.Alignment = new Alignment { Horizontal = HorizontalAlignment.Right, Vertical = VerticalAlignment.Bottom };
+            Screen.Padding = new Vector2(10);
+            Screen.Content =
+            new UIVContainer
             {
                 Content = {
-                    new UIHContainer()
+                    new UIHContainer
                     {
                         Content = {
-                            new UITextLine()
+                            new UITextLine
                             {
                                 Padding = new Vector2(10, 10),
                                 ShowBounds = true,
                             },
                             new UIButton
                             {
-                                Padding = new Vector2(25, 10),
                                 ShowBounds = true,
-                                Content = new UILabel() { Text = "Hello" },
+                                Content = new UILabel() { Text = "Helloooooooooooooooooooooooooooooooooooooo" },
                                 OnClick = () => { Console.WriteLine("Hello"); }
                             },
                             new UIButton
                             {
-                                Padding = new Vector2(90, 10),
                                 ShowBounds = true,
                                 Content = new UILabel() { Text = "Boo" }
                             },
                             new UIButton
                             {
-                                Padding = new Vector2(50, 10),
                                 ShowBounds = true,
                                 Content = new UILabel() { Text = "Hi" }
                             },
@@ -52,25 +52,22 @@ namespace UIPlayground
                         Content = {
                             new UIButton
                             {
-                                Padding = new Vector2(100, 10),
                                 ShowBounds = true,
                                 Content = new UILabel() { Text = "OOF" }
                             },
                             new UIButton
                             {
-                                Padding = new Vector2(25, 69),
                                 ShowBounds = true,
-                                Content = new UILabel() { Text = "Hello" }
+                                Content = new UILabel() { Text = "Hello" },
+                                Alignment = new Alignment { Horizontal = HorizontalAlignment.Center, Vertical = VerticalAlignment.Bottom }
                             },
                             new UIButton
                             {
-                                Padding = new Vector2(90, 10),
                                 ShowBounds = true,
                                 Content = new UILabel() { Text = "Boo" }
                             },
                             new UIButton
                             {
-                                Padding = new Vector2(50, 10),
                                 ShowBounds = true,
                                 Content = new UILabel() { Text = "Hi" }
                             },
@@ -82,13 +79,12 @@ namespace UIPlayground
                 Spacing = 20,
                 ShowBounds = true,
                 Position = new Vector2(100)
-            });
+            };
         }
 
         public static void Update()
         {
-            for (int i = 0; i < elements.Count; i++)
-                elements[i].Update();
+            Screen.Update();
         }
 
         public static void Draw()
@@ -96,8 +92,7 @@ namespace UIPlayground
             BeginDrawing();
             ClearBackground(Color.LIGHTGRAY);
 
-            for (int i = 0; i < elements.Count; i++)
-                elements[i].Draw();
+            Screen.Draw();
 
             DrawFPS(0, 0);
 

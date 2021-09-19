@@ -6,20 +6,9 @@ using System.Numerics;
 
 namespace UIPlayground.UIElements
 {
-    class UIButton : UIElement
+    class UIButton : UIHolder
     {
-        private UIElement _content;
-        public UIElement Content
-        {
-            get { return _content; }
-            set
-            {
-                _content = value;
-                if (value != null)
-                    value.Parent = this;
-            }
-        }
-
+        public Vector2 Size = new Vector2(100, 10);
         public Color Color = Color.DARKGRAY;
         public bool isFocused { get; private set; } = false;
         public Action OnClick;
@@ -29,7 +18,16 @@ namespace UIPlayground.UIElements
             if (Content != null)
             {
                 Rectangle cBounds = Content.Bounds();
-                return new Rectangle(Position.X, Position.Y, cBounds.width + 2 * Padding.X, cBounds.height + 2 * Padding.Y);
+                Rectangle bounds = new Rectangle(Position.X, Position.Y, 2 * Padding.X, 2 * Padding.Y);
+                if (Size.X < cBounds.width)
+                    bounds.width += cBounds.width;
+                else
+                    bounds.width += Size.X;
+                if (Size.Y < cBounds.height)
+                    bounds.height += cBounds.height;
+                else
+                    bounds.height += Size.Y;
+                return bounds;
             }
             else
                 return base.Bounds();
@@ -45,22 +43,13 @@ namespace UIPlayground.UIElements
             if (isFocused && IsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON) && OnClick != null)
                 OnClick.Invoke();
 
-            Content.Update();
-
             base.Update();
         }
 
         public override void Draw()
         {
             Color color = isFocused ? Fade(Color, 0.5f) : Color;
-
             DrawRectangleRec(Bounds(), color);
-
-            if (Content != null)
-            {
-                Content.Position = Position + Padding;
-                Content.Draw();
-            }
             base.Draw();
         }
     }

@@ -8,6 +8,8 @@ namespace UIPlayground.UIElements
 {
     abstract class UIContainer : UIElement
     {
+        public Alignment Alignment;
+
         private List<UIElement> _content = new List<UIElement>();
         public List<UIElement> Content 
         {

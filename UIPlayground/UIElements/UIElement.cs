@@ -11,7 +11,7 @@ namespace UIPlayground.UIElements
 {
     class UIElement
     {
-        public Vector2 Padding = new Vector2(10,10);
+        public Vector2 Padding = new Vector2(10);
         public Vector2 Position = Vector2.Zero;
         public bool ShowBounds = false;
         public UIElement Parent;

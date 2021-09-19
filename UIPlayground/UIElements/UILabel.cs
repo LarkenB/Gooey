@@ -11,6 +11,7 @@ namespace UIPlayground.UIElements
         public string Text;
         public int FontSize = 20;
         public Color Color = Color.WHITE;
+        public new Vector2 Padding = Vector2.Zero;
 
         public override Rectangle Bounds()
         {
