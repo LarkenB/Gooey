@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = UIPlayground
-build_property.ProjectDir = C:\Users\larke\source\repos\UIPlayground\UIPlayground\
+build_property.ProjectDir = C:\Users\larke\source\repos\UIPlayground\Gooey\UIPlayground\

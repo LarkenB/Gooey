@@ -122,11 +122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\larke\\source\\repos\\UIPlayground\\UIPlayground\\UIPlayground.csproj",
+      "projectUniqueName": "C:\\Users\\larke\\source\\repos\\UIPlayground\\Gooey\\UIPlayground\\UIPlayground.csproj",
       "projectName": "UIPlayground",
-      "projectPath": "C:\\Users\\larke\\source\\repos\\UIPlayground\\UIPlayground\\UIPlayground.csproj",
+      "projectPath": "C:\\Users\\larke\\source\\repos\\UIPlayground\\Gooey\\UIPlayground\\UIPlayground.csproj",
       "packagesPath": "C:\\Users\\larke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\larke\\source\\repos\\UIPlayground\\UIPlayground\\obj\\",
+      "outputPath": "C:\\Users\\larke\\source\\repos\\UIPlayground\\Gooey\\UIPlayground\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

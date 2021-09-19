@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gBvlr1OyDTJkeqDPAVfIo8Xp9+rGW+LpJF/XqxHeNTh4SrZyFvCeLZr347kFzFA9e9S5nvr1YyZEddOJXmZxYA==",
+  "dgSpecHash": "Wq6XZILQHOI1ddC2Z2ROBDmCjfbJyetLr+qOI1XBljhcS0aQxUP4mVWVYrEOLqEFUfeV3wDUj03g0TEEVJ8vQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\larke\\source\\repos\\UIPlayground\\UIPlayground\\UIPlayground.csproj",
+  "projectFilePath": "C:\\Users\\larke\\source\\repos\\UIPlayground\\Gooey\\UIPlayground\\UIPlayground.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\larke\\.nuget\\packages\\raylib-cs\\3.7.0\\raylib-cs.3.7.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
