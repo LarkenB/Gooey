@@ -13,11 +13,17 @@ namespace UIPlayground.UIElements
         public int FontSize = 20;
         public int Length = 200;
         public Color Color = Color.DARKGRAY;
+        public bool isActive { get; private set; } = false; // maybe rename to isPressed?
         public bool isFocused { get; private set; } = false;
 
         private bool _wasBackspacing = false;
         private int _backspaceFrameCount = 0;
         private int _framesCounter = 0;
+
+        private bool _wasDragStarted = false;
+        private Vector2 _dragStart;
+        private Vector2 _dragEnd;
+        private bool _wasDragFinished = false;
 
         public override Rectangle Bounds()
         {
@@ -26,20 +32,62 @@ namespace UIPlayground.UIElements
 
         public override void Update()
         {
-            if (IsMouseButtonDown(MouseButton.MOUSE_LEFT_BUTTON))
+            if (CheckCollisionPointRec(GetMousePosition(), Bounds()))
             {
-                if (CheckCollisionPointRec(GetMousePosition(), Bounds()))
+                isFocused = true;
+                if (IsMouseButtonDown(MouseButton.MOUSE_LEFT_BUTTON))
                 {
-                    isFocused = true;
+                    isActive = true;
+                    _wasDragStarted = true;
+                    _dragStart = GetMousePosition();
                 }
-                else
+            }
+            else
+            {
+                isFocused = false;
+                if (IsMouseButtonDown(MouseButton.MOUSE_LEFT_BUTTON))
                 {
-                    isFocused = false;
+                    isActive = false;
                     _framesCounter = 0;
                 }
             }
 
-            if (isFocused)
+            if (IsMouseButtonReleased(MouseButton.MOUSE_LEFT_BUTTON) && _wasDragStarted)
+            {
+                if (GetMousePosition() != _dragStart)
+                {
+                    _wasDragStarted = false;
+                    _dragEnd = GetMousePosition();
+                    _wasDragFinished = true;
+                }
+            }
+            else
+                _wasDragFinished = false;
+
+            //if (_wasDragFinished)
+            //{
+            //    if (Vector2.Distance(_dragStart, _dragEnd) >= 5)
+            //    {
+            //        Console.WriteLine("Drag event...");
+            //        int startX = _dragStart.X < Position.X + Padding.X ? (int)Position.X : (int)_dragStart.X;
+            //        uint deltaX = (uint)Math.Abs(_dragStart.X - _dragEnd.X);
+            //        if (_dragStart.X > _dragEnd.X)
+            //        {
+            //            // Drag from right to left
+            //            //Position.X + Padding.X
+            //        }
+            //        else
+            //        {
+            //            // Drag from left to right
+            //            while (deltaX < )
+            //            {
+            //                if (_dragStart.X < Position.X + Padding.X)
+            //            }
+            //        }
+            //    }
+            //}
+
+            if (isActive)
             {
                 int key = GetCharPressed();
 
@@ -52,7 +100,7 @@ namespace UIPlayground.UIElements
                     key = GetCharPressed();  // Check next character in the queue
                 }
 
-                if (IsKeyDown(KeyboardKey.KEY_BACKSPACE))
+                if (IsKeyDown(KeyboardKey.KEY_BACKSPACE)) //super simple backspacing that should be changed to behave more like common textlines
                 {
                     _wasBackspacing = true;
                     if (Text.Length != 0)
@@ -83,9 +131,11 @@ namespace UIPlayground.UIElements
 
         public override void Draw()
         {
-            DrawRectangleRec(Bounds(), Color);
+            Color color = isFocused ? Fade(Color, 0.5f) : Color;
+
+            DrawRectangleRec(Bounds(), color);
             DrawTextRec(GetFontDefault(), Text, new Rectangle(Position.X + Padding.X, Position.Y + Padding.Y, Bounds().width - 2 * Padding.X, Bounds().height - 2 * Padding.Y), FontSize, FontSize / 10, false, Color.WHITE);
-            if (isFocused)
+            if (isActive)
             {
                 if (((_framesCounter / 40) % 2) == 0) 
                     DrawText("_", (int)(Position.X + Padding.X + FontSize / 10 + MeasureText(Text, FontSize)), (int)(Position.Y + Padding.Y), FontSize, Color.WHITE);

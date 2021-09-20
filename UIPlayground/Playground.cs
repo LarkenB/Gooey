@@ -31,7 +31,8 @@ namespace UIPlayground
                             {
                                 ShowBounds = true,
                                 Content = new UILabel() { Text = "Helloooooooooooooooooooooooooooooooooooooo" },
-                                OnClick = () => { Console.WriteLine("Hello"); }
+                                OnClick = () => { Console.WriteLine("Hello"); },
+                                Size = new Vector2(100, 300)
                             },
                             new UIButton
                             {
@@ -45,7 +46,8 @@ namespace UIPlayground
                             },
                         },
                         Spacing = 10,
-                        ShowBounds = true
+                        ShowBounds = true,
+                        Alignment = VerticalAlignment.Top
                     },
                     new UIHContainer()
                     {
