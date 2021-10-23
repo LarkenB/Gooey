@@ -42,3 +42,5 @@ C:\Users\larke\source\repos\Gooey\UIPlayground\obj\Debug\net5.0\UIPlayground.dll
 C:\Users\larke\source\repos\Gooey\UIPlayground\obj\Debug\net5.0\ref\UIPlayground.dll
 C:\Users\larke\source\repos\Gooey\UIPlayground\obj\Debug\net5.0\UIPlayground.pdb
 C:\Users\larke\source\repos\Gooey\UIPlayground\obj\Debug\net5.0\UIPlayground.genruntimeconfig.cache
+C:\Users\larke\source\repos\Gooey\UIPlayground\bin\Debug\net5.0\Gooey.dll
+C:\Users\larke\source\repos\Gooey\UIPlayground\bin\Debug\net5.0\Gooey.pdb

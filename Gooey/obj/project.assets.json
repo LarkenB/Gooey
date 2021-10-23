@@ -40,19 +40,6 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
-      },
-      "Gooey/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Raylib-cs": "3.7.0.1"
-        },
-        "compile": {
-          "bin/placeholder/Gooey.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gooey.dll": {}
-        }
       }
     }
   },
@@ -121,16 +108,10 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Gooey/1.0.0": {
-      "type": "project",
-      "path": "../Gooey/Gooey.csproj",
-      "msbuildProject": "../Gooey/Gooey.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Gooey >= 1.0.0",
       "Raylib-cs >= 3.7.0.1"
     ]
   },
@@ -140,11 +121,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\larke\\source\\repos\\Gooey\\UIPlayground\\UIPlayground.csproj",
-      "projectName": "UIPlayground",
-      "projectPath": "C:\\Users\\larke\\source\\repos\\Gooey\\UIPlayground\\UIPlayground.csproj",
+      "projectUniqueName": "C:\\Users\\larke\\source\\repos\\Gooey\\Gooey\\Gooey.csproj",
+      "projectName": "Gooey",
+      "projectPath": "C:\\Users\\larke\\source\\repos\\Gooey\\Gooey\\Gooey.csproj",
       "packagesPath": "C:\\Users\\larke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\larke\\source\\repos\\Gooey\\UIPlayground\\obj\\",
+      "outputPath": "C:\\Users\\larke\\source\\repos\\Gooey\\Gooey\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\larke\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -160,11 +141,7 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {
-            "C:\\Users\\larke\\source\\repos\\Gooey\\Gooey\\Gooey.csproj": {
-              "projectPath": "C:\\Users\\larke\\source\\repos\\Gooey\\Gooey\\Gooey.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

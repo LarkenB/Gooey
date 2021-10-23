@@ -1,0 +1,12 @@
+C:\Users\larke\source\repos\Gooey\Gooey\bin\Debug\net5.0\Gooey.deps.json
+C:\Users\larke\source\repos\Gooey\Gooey\bin\Debug\net5.0\Gooey.dll
+C:\Users\larke\source\repos\Gooey\Gooey\bin\Debug\net5.0\ref\Gooey.dll
+C:\Users\larke\source\repos\Gooey\Gooey\bin\Debug\net5.0\Gooey.pdb
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.csprojAssemblyReference.cache
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.AssemblyInfoInputs.cache
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.AssemblyInfo.cs
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.csproj.CoreCompileInputs.cache
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.dll
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\ref\Gooey.dll
+C:\Users\larke\source\repos\Gooey\Gooey\obj\Debug\net5.0\Gooey.pdb

@@ -1,9 +1,8 @@
-﻿using System;
-using static Raylib_cs.Raylib;
+﻿using static Raylib_cs.Raylib;
 using Raylib_cs;
-using System.Numerics;
+using Gooey;
 
-namespace UIPlayground
+namespace Test
 {
     class Program
     {

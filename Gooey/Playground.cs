@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using Raylib_cs;
 using static Raylib_cs.Raylib;
-using UIPlayground.UIElements;
+using Gooey.UIElements;
 using System.Numerics;
 
-namespace UIPlayground
+namespace Gooey
 {
-    static class Playground
+    public static class Playground
     {
         private static UIScreen Screen = new UIScreen();
 
