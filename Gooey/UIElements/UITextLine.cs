@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UITextLine : UIElement
+    public class UITextLine : UIElement
     {
         public uint MaxChars = 10;
         public string Text { get; private set; } = "";

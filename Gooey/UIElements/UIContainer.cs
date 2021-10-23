@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    abstract class UIContainer : UIElement
+    public abstract class UIContainer : UIElement
     {
         private List<UIElement> _content = new List<UIElement>();
         public List<UIElement> Content 

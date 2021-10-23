@@ -1,19 +1,19 @@
 ﻿namespace Gooey
 {
-    class Alignment
+    public class Alignment
     {
         public VerticalAlignment Vertical = VerticalAlignment.Center;
         public HorizontalAlignment Horizontal = HorizontalAlignment.Center;
     }
 
-    enum VerticalAlignment
+    public enum VerticalAlignment
     {
         Top,
         Center,
         Bottom
     }
 
-    enum HorizontalAlignment
+    public enum HorizontalAlignment
     {
         Left,
         Center,

@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UIHContainer : UIContainer
+    public class UIHContainer : UIContainer
     {
         public uint Spacing;
         public VerticalAlignment Alignment = VerticalAlignment.Center;

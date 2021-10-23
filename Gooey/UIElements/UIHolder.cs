@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UIHolder : UIElement
+    public class UIHolder : UIElement
     {
         public Alignment Alignment = new Alignment { Horizontal = HorizontalAlignment.Center, Vertical = VerticalAlignment.Center };
 

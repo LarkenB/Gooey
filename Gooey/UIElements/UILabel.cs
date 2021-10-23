@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UILabel: UIElement
+    public class UILabel: UIElement
     {
         public string Text;
         public int FontSize = 20;

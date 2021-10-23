@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UIScreen : UIHolder
+    public class UIScreen : UIHolder
     {
         public override Rectangle Bounds()
         {

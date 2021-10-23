@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using Raylib_cs;
 using static Raylib_cs.Raylib;
-using Gooey.UIElements;
 using System.Numerics;
+using Gooey;
+using Gooey.UIElements;
 
-namespace Gooey
+namespace UIPlayground
 {
     public static class Playground
     {

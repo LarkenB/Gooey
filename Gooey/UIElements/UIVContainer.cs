@@ -4,7 +4,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UIVContainer : UIContainer
+    public class UIVContainer : UIContainer
     {
         public uint Spacing;
 

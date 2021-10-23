@@ -9,7 +9,7 @@ using static Raylib_cs.Raylib;
 
 namespace Gooey.UIElements
 {
-    class UIElement
+    public class UIElement
     {
         public Vector2 Padding = new Vector2(10);
         public Vector2 Position = Vector2.Zero;

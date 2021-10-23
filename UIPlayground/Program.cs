@@ -1,8 +1,7 @@
 ﻿using static Raylib_cs.Raylib;
 using Raylib_cs;
-using Gooey;
 
-namespace Test
+namespace UIPlayground
 {
     class Program
     {

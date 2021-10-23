@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Gooey.UIElements
 {
-    class UIButton : UIHolder
+    public class UIButton : UIHolder
     {
         public Vector2 Size = new Vector2(100, 10);
         public Color Color = Color.DARKGRAY;
