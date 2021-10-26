@@ -7,6 +7,7 @@ namespace Gooey.UIElements
     public class UIVContainer : UIContainer
     {
         public uint Spacing;
+        public HorizontalAlignment Alignment = HorizontalAlignment.Center;
 
         public override Rectangle Bounds()
         {
@@ -36,12 +37,37 @@ namespace Gooey.UIElements
             if (Content != null && Content.Count != 0)
             {
                 float height = Padding.Y;
-                Content[0].Position = Position + new Vector2((bounds.width - Content[0].Bounds().width) / 2, height);
+                uint width = 0;
+                switch (Alignment)
+                {
+                    case HorizontalAlignment.Left:
+                        width = (uint)Padding.X;
+                        break;
+                    case HorizontalAlignment.Center:
+                        width = (uint)((bounds.width - Content[0].Bounds().width) / 2);
+                        break;
+                    case HorizontalAlignment.Right:
+                        width = (uint)(bounds.width - Content[0].Bounds().width - Padding.X);
+                        break;
+                }
+                Content[0].Position = Position + new Vector2(width, height);
                 Content[0].Draw();
                 height += Content[0].Bounds().height;
                 for (int i = 1; i < Content.Count; i++)
                 {
                     height += Spacing;
+                    switch (Alignment)
+                    {
+                        case HorizontalAlignment.Left:
+                            width = (uint)Padding.X;
+                            break;
+                        case HorizontalAlignment.Center:
+                            width = (uint)((bounds.width - Content[i].Bounds().width) / 2);
+                            break;
+                        case HorizontalAlignment.Right:
+                            width = (uint)(bounds.width - Content[i].Bounds().width - Padding.X);
+                            break;
+                    }
                     Content[i].Position = Position + new Vector2((bounds.width - Content[i].Bounds().width) / 2, height);
                     Content[i].Draw();
                     height += Content[i].Bounds().height;
